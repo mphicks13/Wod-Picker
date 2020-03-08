@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "live-server public/",
     "build": "webpack --watch",
-    "build-babel": "babel src/main-original.js --out-file=public/main.js --presets=env,react --watch"
+    "build-babel": "babel src/main-2.js --out-file=public/main-2.js --presets=env,react --watch"
   },
   "author": "",
   "license": "ISC",

@@ -3,10 +3,8 @@ class WodPickerApp extends React.Component {
         super(props);
         this.handleAddOption = this.handleAddOption.bind(this);
         this.deleteAll = this.deleteAll.bind(this);
-        this.handleChangeChecked = this.handleChangeChecked.bind(this);
         this.state = {
             movements: [],
-            checked: false
         }
     }
     componentDidMount() {
@@ -42,10 +40,6 @@ class WodPickerApp extends React.Component {
         this.setState(() => ({movements: []}))
     }
 
-    // throwing an error here. need to figure out checked still
-    handleChangeChecked(event) {
-        this.setState({ [key]: event.target.checked })
-    }
     render() {
         return (
             <div>
@@ -53,8 +47,7 @@ class WodPickerApp extends React.Component {
                 <Options 
                     labels={this.state.movements}
                     deleteAll={this.deleteAll} 
-                    handleChangeChecked={this.handleChangeChecked}
-                    checked={this.state.checked}
+    
 
                 />
                 <AddOption 
@@ -84,7 +77,7 @@ const Options = (props) => {
                         <Movement
                             key={label}
                             labelText={label}
-                            handleChangeChecked={props.handleChangeChecked}
+                            
                         />
                     ))
                 }
@@ -95,6 +88,9 @@ const Options = (props) => {
 class Movement extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            
+        }
     }
     render() {
         return (
